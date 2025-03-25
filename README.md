@@ -1,70 +1,133 @@
-# Getting Started with Create React App
+# trilha-react-desafio-3
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Este projeto é um desafio da trilha React que utiliza o Create React App para criação de uma aplicação web com React, Styled Components e React Router. A aplicação simula uma interface de rede social com páginas de Home, Login, Sign Up e Feed, demonstrando o uso de componentes reutilizáveis e gerenciamento de rotas.
 
-## Available Scripts
+## Tecnologias Utilizadas
 
-In the project directory, you can run:
+- React
+- React Router DOM
+- Styled Components
+- Axios (para chamadas de API)
+- Create React App
+
+## Estrutura do Projeto
+
+│  
+├── public/  
+│ └── index.html  
+│  
+├── src/  
+│ ├── components/  
+│ │ ├── Button/  
+│ │ │ └── styles.js  
+│ │ ├── Card/  
+│ │ │ └── styles.js  
+│ │ ├── Header/  
+│ │ │ └── styles.js  
+│ │ ├── Input/  
+│ │ │ └── styles.js  
+│ │ └── UserInfo/  
+│ │ └── styles.js  
+│ │  
+│ ├── pages/  
+│ │ ├── feed/  
+│ │ │ └── styles.js  
+│ │ ├── home/  
+│ │ │ └── styles.js  
+│ │ ├── login/  
+│ │ │ └── styles.js  
+│ │ └── signup/  
+│ │ └── (component files)  
+│ │  
+│ ├── services/  
+│ │ └── api.js  
+│ │  
+│ ├── styles/  
+│ │ └── global.js  
+│ │  
+│ ├── App.js  
+│ └── index.js  
+│  
+└── README.md
+
+## Scripts Disponíveis
+
+No diretório do projeto, você pode executar:
 
 ### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Executa o aplicativo no modo de desenvolvimento.\
+Abra [http://localhost:3000](http://localhost:3000) para visualizar no navegador.  
+A página recarrega automaticamente quando você faz alterações. Você também verá quaisquer erros de lint no console.
 
 ### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Inicia o executor de testes no modo watch interativo.\
+Veja os detalhes na [documentação do Create React App](https://facebook.github.io/create-react-app/docs/running-tests).
 
 ### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Compila o aplicativo para produção na pasta `build`.\
+Ele agrupa corretamente o React no modo de produção e otimiza a build para a melhor performance.
 
 ### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+(Remova essa opção somente se tiver certeza das alterações que deseja fazer.)  
+Este comando copia todas as configurações e dependências transitivas (Webpack, Babel, ESLint, etc.) para o projeto, permitindo controle total sobre as mesmas.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Configuração do Projeto
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+1. Clone o repositório:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+```bash
+git clone <https://github.com/ViniciusANascimento/clone-dio-react.git>
+```
 
-## Learn More
+2. Navegue até a pasta do projeto:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```bash
+cd clone-dio-react
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+3. Instale as dependências:
 
-### Code Splitting
+```bash
+npm install
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Executando o Projeto
 
-### Analyzing the Bundle Size
+Após instalar as dependências, inicie o projeto com:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+```bash
+npm start
+```
 
-### Making a Progressive Web App
+O aplicativo estará disponível em [http://localhost:3000](http://localhost:3000).
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## Estrutura e Funcionalidades
 
-### Advanced Configuration
+- **Rotas:**  
+  A navegação é gerenciada utilizando o React Router. As rotas configuradas incluem:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+  - `/` - Página inicial (Home)
+  - `/login` - Página de login
+  - `/signup` - Página de cadastro
+  - `/feed` - Página de feed com cards de posts
 
-### Deployment
+- **Estilização:**  
+  O projeto utiliza o Styled Components para criação e gerenciamento de estilos. O estilo global da aplicação é definido em `src/styles/global.js`.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+- **Componentes Reutilizáveis:**  
+  Componentes como Button, Input, Card e Header foram criados para promover a reutilização e a consistência visual na aplicação.
 
-### `npm run build` fails to minify
+- **Integração com API:**  
+  O arquivo `src/services/api.js` utiliza Axios para comunicação com a API, com a URL base configurada para `http://localhost:8001`.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Contribuição
+
+Sinta-se à vontade para enviar issues, sugestões ou pull requests para melhorar o projeto.
+
+## Licença
+
+Este projeto está licenciado sob os termos da licença MIT.
