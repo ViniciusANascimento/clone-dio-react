@@ -1,4 +1,4 @@
-# trilha-react-desafio-3
+# Clone do site da DIO.me
 
 Este projeto é um desafio da trilha React que utiliza o Create React App para criação de uma aplicação web com React, Styled Components e React Router. A aplicação simula uma interface de rede social com páginas de Home, Login, Sign Up e Feed, demonstrando o uso de componentes reutilizáveis e gerenciamento de rotas.
 
